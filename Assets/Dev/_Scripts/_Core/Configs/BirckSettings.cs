@@ -1,8 +1,14 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "TileSprites", menuName = "Tiles/Sprite Collection")]
-public class SpriteCollectionSO : ScriptableObject
+[CreateAssetMenu(fileName = "BrickSettings", menuName = "Game/BrickSettings")]
+public class BrickSettingsSO : ScriptableObject, IBrickSettings
 {
-    public List<Sprite> Sprites = new List<Sprite>();
+    public float Width => _width;
+    public float Height => _height;
+    public Sprite[] Sprites => _sprites;
+
+    [SerializeField] private float _width = 1.5f;
+    [SerializeField] private float _height = 2f;
+    [SerializeField] private Sprite[] _sprites;
+
 }

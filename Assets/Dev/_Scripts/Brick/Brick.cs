@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+public class Brick : MonoBehaviour, IBrick
 {
     private SpriteRenderer _spriteRenderer;
 
@@ -12,5 +12,10 @@ public class Tile : MonoBehaviour
     public void SetSprite(Sprite sprite)
     {
         _spriteRenderer.sprite = sprite;
+    }
+
+    public Transform GetTransform()
+    {
+        return transform;
     }
 }

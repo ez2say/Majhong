@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918632e7b9e0a0449a2d2317e1db7b61, type: 3}
   m_Name: TileSprites
   m_EditorClassIdentifier: 
-  Sprites: []
+  Sprites:
+  - {fileID: 21300000, guid: f07621892ae2c744c8d442608c951baa, type: 3}
+  - {fileID: 21300000, guid: c2bfa79b512c5ae48badd2547a937540, type: 3}
+  - {fileID: 21300000, guid: bca7fb003883ae94ebea1836706dce3c, type: 3}
+  - {fileID: 21300000, guid: aada8fa276a526e409ec0cc25b1a75ee, type: 3}
+  - {fileID: 21300000, guid: 0b804319fe1d5224db1ce48aa42e3702, type: 3}

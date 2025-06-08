@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameBootstrapper : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject _brickPrefab;
+    [SerializeField] private Transform _spawnParent;
+    [SerializeField] private int _brickCount = 9;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        ISpawnStrategy strategy = new PyramidSpawnStrategy();
+        BrickSpawner spawner = new BrickSpawner(_brickPrefab, strategy, _spawnParent, _brickCount);
+        spawner.Spawn();
     }
 }
